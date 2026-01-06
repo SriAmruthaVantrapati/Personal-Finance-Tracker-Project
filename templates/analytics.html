@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Analytics - Personal Finance Tracker</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/dashboard.css') }}">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+  <nav class="topbar">
+    <div class="brand">
+      <img src="{{ url_for('static', filename='assets/logo.png') }}" class="brand-logo">
+      <span class="brand-name">Finance Tracker</span>
+    </div>
+    <div class="top-actions">
+      <a href="{{ url_for('dashboard') }}" class="nav-btn">Dashboard</a>
+      <a href="{{ url_for('analytics') }}" class="nav-btn active">Analytics</a>
+      <a href="{{ url_for('login') }}" class="nav-btn">Logout</a>
+    </div>
+  </nav>
+
+  <main style="padding: 30px; max-width: 1100px; margin:auto;">
+    <h1>📊 Expense Analytics</h1>
+    <p class="muted">Clear view of expenses by category</p>
+
+    <div style="
+      background:#fff;
+      padding:25px;
+      border-radius:14px;
+      box-shadow:0 10px 25px rgba(0,0,0,0.1);
+      margin-top:20px;">
+      <canvas id="expenseChart" height="400px"></canvas>
+    </div>
+  </main>
+
+  <script src="{{ url_for('static', filename='js/dashboard.js') }}"></script>
+</body>
+</html>

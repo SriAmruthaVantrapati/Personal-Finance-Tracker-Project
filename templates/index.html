@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Welcome - Personal Finance Tracker</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">
+      <img src="{{ url_for('static', filename='assets/logo.png') }}" alt="Logo" />
+      <h2>Finance Tracker</h2>
+    </div>
+    <nav>
+      <a href="{{ url_for('login') }}">Login</a>
+      <a href="{{ url_for('signup') }}">Create Account</a>
+      <a href="{{ url_for('forgot_password') }}">Forgot Password</a>
+      <a href="{{ url_for('support') }}">Support</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h1>💰 Manage Your Money Smarter</h1>
+      <p>Track income, control expenses, and grow your savings — all in one place.</p>
+      <div class="buttons">
+        <a href="{{ url_for('login') }}" class="btn primary">Get Started</a>
+        <a href="{{ url_for('signup') }}" class="btn secondary">Create Account</a>
+      </div>
+    </div>
+    <div class="hero-image">
+      <img src="{{ url_for('static', filename='assets/dashboard.jpg') }}" alt="Finance Dashboard">
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Personal Finance Tracker. All rights reserved.</p>
+  </footer>
+</body>
+</html>
